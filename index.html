@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GS1 Validator</title>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/index.js"></script>
+
+
+</head>
+<body onload="">
+
+<div class="container">
+    <form id="barCodeForm" onsubmit="readBarCode()" action="#">
+        <div class="input-group">
+            <input type="text" id="submitCodeForm" class="form-control" autofocus/>
+            <span class="input-group-btn">
+                <button class="btn btn-success" onclick="readBarCode();" type="button">Go!</button>
+            </span>
+        </div>
+    </form>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">SCAN</th>
+            <th scope="col"><span id="scannedCodeSpan"></span></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>GTIN</td>
+            <td><span id="GTINField">null</span></td>
+            <td><span id="GTINVal">null</span></td>
+        </tr>
+        <tr>
+            <td>MHD</td>
+            <td><span id="MHDfield">null</span></td>
+            <td><span id="MHDVal">null</span></td>
+        </tr>
+        <tr>
+            <td>Batch</td>
+            <td><span id="BatchField">null</span></td>
+            <td><span id="BatchVal">null</span></td>
+        </tr>
+        </tbody>
+    </table>
+    <div id="errorDivParent"></div>
+    <div>
+
+</body>
+</html>

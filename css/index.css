@@ -1,0 +1,7 @@
+.footer-copyright {
+    opacity: .3;
+}
+
+.footer-copyright:hover {
+    opacity: .8;
+}

@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <title>GS1 Validator</title>
     <script src="js/jquery-3.4.1.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/index.css">
 
 
 </head>
 <body onload="">
 
-<div class="container">
+<div class="container-fluid ">
     <form id="barCodeForm" onsubmit="readBarCode()" action="#">
         <div class="input-group">
             <input type="text" id="submitCodeForm" class="form-control" autofocus/>
@@ -20,7 +22,7 @@
             </span>
         </div>
     </form>
-    <table class="table">
+    <table id="gtinTable" class="table border border-success">
         <thead>
         <tr>
             <th scope="col">#</th>
@@ -47,7 +49,20 @@
         </tbody>
     </table>
     <div id="errorDivParent"></div>
-    <div>
 
+
+
+
+    <!-- Footer -->
+    <footer class="page-footer font-small blue fixed-bottom">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2019
+            <a href="https://abenjamins.com">Aiko Benjamins</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
 </body>
 </html>

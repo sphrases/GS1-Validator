@@ -34,6 +34,10 @@ function splitBarCode(barCode) {
     console.log(MHDfield + " " + MHDVal);
     console.log(BatchField + " " + BatchVal);
 
+
+
+    $("#gtinTable").attr("class", "table border border-success");
+
     $("#scannedCodeSpan").html(barCode)
         .css('color','lime');
     $("#GTINField").html(GTINField)
@@ -117,6 +121,7 @@ function validateBatch(BatchField, BatchVal) {
 
 function throwError(error) {
     $("#scannedCodeSpan").css('color','red');
+    $("#gtinTable").attr("class", "table border border-danger");
     if (typeof error == 'undefined') {
         console.log("Unknown Error");
         $("#errorDivParent").append("<h5 class='errorChild'>Unknown Error</h5>")
